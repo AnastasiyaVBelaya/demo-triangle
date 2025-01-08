@@ -3,14 +3,14 @@ package by.itacademy.anastasiyabelaya;
 public class Triangles {
     public static String defineTriangle(int a, int b, int c) {
         if (!isValidTriangle(a, b, c)) {
-            return "Треугольник a=..., b=..., c=... не является треугольником";
+            return String.format("Треугольник a=%d, b=%d, c=%d не является треугольником",a,b,c);
         } else if (isEquilateralTriangle(a, b, c)) {
-            return "Треугольник a=..., b=..., c=... - равносторонний треугольник";
+            return String.format("Треугольник a=%d, b=%d, c=%d - равносторонний треугольник",a,b,c);
         } else if (isIsoscelesTriangle(a, b, c)) {
-            return "Треугольник a=..., b=..., c=... - равнобедренный треугольник";
+            return String.format("Треугольник a=%d, b=%d, c=%d - равнобедренный треугольник",a,b,c);
         } else if (isRightTriangle(a, b, c)) {
-            return "Треугольник a=..., b=..., c=... - прямогульный треугольник";
-        } else return "Треугольник a=..., b=..., c=... - обычный треугольник";
+            return String.format("Треугольник a=%d, b=%d, c=%d - прямогульный треугольник",a,b,c);
+        } else return String.format("Треугольник a=%d, b=%d, c=%d - обычный треугольник",a,b,c);
     }
 
     private static boolean isValidTriangle(int side1, int side2, int side3) {
